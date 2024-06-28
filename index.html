@@ -14,13 +14,15 @@
     <div class="container">
         <nav>
             <img src="j.png" class ="logo">
-            <ul>
+            <ul id="sidemenu">
                 <li><a href="#header">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#portfolio">Works</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <i class="fa-solid fas fa-xmark" onclick="closemenu()"></i>
             </ul>
+            <i class="fa-solid fas fa-bars" onclick="openmenu()"></i>
         </nav>
         <div class="header-text" >
             <h1>Hi, I'm <span style="color: red;">Meghashyam</span> </h1>
@@ -140,8 +142,8 @@
                 <p><i class="fa-solid fa-phone"></i>6281076442</p>
                 <div class="social-icons">
                     <a href="https://github.com/chekkadameghashyam"><i class="fa-brands fa-github"></i></i></a>
-                    <a href="https://www.instagram.com/meghashyam_"><i class="fa-brands fa-instagram"></i> </a>
-                    <a href="https://x.com/Meghashyam_"><i class="fa-brands fa-square-x-twitter"></i></a>
+                    <a href="https://www.instagram.com/meghashyam___"><i class="fa-brands fa-instagram"></i> </a>
+                    <a href="https://x.com/Meghashyam___"><i class="fa-brands fa-square-x-twitter"></i></a>
                     <a href="https://www.linkedin.com/in/meghashyam-chekkada-6281b4292/"><i class="fa-brands fa-linkedin"></i></a>
                 </div>
                 <a href="C:\Users\91628\Downloads\resume.pdf" download class="btn btn2">Download CV</a>
@@ -157,7 +159,7 @@
         </div>
     </div>
     <div class="copyright">
-        <p>Copyright © Meghashyam.</p>
+        <p>Copyright © Chekkada Meghashyam.</p>
     </div>
 </div>
 
@@ -187,8 +189,21 @@
         .then(response => console.log('Success!', response))
         .catch(error => console.error('Error!', error.message))
     })
-  </script>
-  
+</script>
+
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu()
+    {
+        sidemenu.style.right = "0";
+    }
+    function closemenu()
+    {
+        sidemenu.style.right = "-200px";
+    }
+</script>
+
 </body>
 
 </html>
